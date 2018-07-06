@@ -1,0 +1,7 @@
+ticket_list:
+    path:     /
+    defaults: { _controller: ClientTicketBundle:Default:list }
+
+ticket_add:
+    path:     /add
+    defaults: { _controller: ClientTicketBundle:Default:add }
