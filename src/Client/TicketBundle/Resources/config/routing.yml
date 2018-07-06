@@ -1,3 +1,7 @@
+client_ticket_order:
+    resource: "@ClientTicketBundle/Resources/config/routing/ordering.yml"
+    prefix:   /order
+
 ticket_list:
     path:     /
     defaults: { _controller: ClientTicketBundle:Default:list }
