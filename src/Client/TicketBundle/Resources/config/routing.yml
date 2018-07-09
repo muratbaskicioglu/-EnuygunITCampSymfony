@@ -2,9 +2,17 @@ client_ticket_order:
     resource: "@ClientTicketBundle/Resources/config/routing/ordering.yml"
     prefix:   /order
 
-client_category_order:
+client_ticket_category:
     resource: "@ClientTicketBundle/Resources/config/routing/category.yml"
     prefix:   /category
+
+order_page:
+    path:     /order/
+    defaults: { _controller: ClientTicketBundle:Ordering:indexAction }
+
+category_page:
+    path:     /category/
+    defaults: { _controller: ClientTicketBundle:Category:indexAction }
 
 ticket_list:
     path:     /

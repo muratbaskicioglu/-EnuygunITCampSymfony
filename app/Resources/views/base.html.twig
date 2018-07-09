@@ -7,8 +7,9 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        <a href="{{ path('ticket_list') }}">List</a> |
-        <a href="{{ path('ticket_add') }}">Add</a>
+        <a href="{{ path('ticket_list') }}">Home</a> |
+        <a href="{{ path('order_page') }}">Orders</a> |
+        <a href="{{ path('category_page') }}">Categories</a>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
