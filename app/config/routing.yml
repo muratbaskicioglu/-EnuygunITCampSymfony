@@ -1,7 +1,11 @@
 client_ticket:
     resource: "@ClientTicketBundle/Resources/config/routing.yml"
-    prefix:   /ticket/
+    prefix:   /admin/ticket/
 
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
