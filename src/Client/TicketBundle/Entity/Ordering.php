@@ -2,6 +2,7 @@
 
 namespace Client\TicketBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -56,6 +57,11 @@ class Ordering
      */
     private $status;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Client\TicketBundle\Entity\Category", inversedBy="ordering")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     */
+    private $category;
 
     /**
      * Get id
