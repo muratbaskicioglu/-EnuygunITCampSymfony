@@ -192,28 +192,5 @@ class Ordering
     {
         return $this->status;
     }
-
-    /**
-     * Set category
-     *
-     * @param \Client\TicketBundle\Entity\Category $category
-     *
-     * @return Ordering
-     */
-    public function setCategory(\Client\TicketBundle\Entity\Category $category = null)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return \Client\TicketBundle\Entity\Category
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
 }
+

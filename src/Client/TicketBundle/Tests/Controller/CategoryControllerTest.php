@@ -4,7 +4,7 @@ namespace Client\TicketBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class OrderingControllerTest extends WebTestCase
+class CategoryControllerTest extends WebTestCase
 {
     /*
     public function testCompleteScenario()
@@ -13,13 +13,13 @@ class OrderingControllerTest extends WebTestCase
         $client = static::createClient();
 
         // Create a new entry in the database
-        $crawler = $client->request('GET', '/ordering/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /ordering/");
+        $crawler = $client->request('GET', '/category/');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /category/");
         $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'client_ticketbundle_ordering[field_name]'  => 'Test',
+            'client_ticketbundle_category[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class OrderingControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Update')->form(array(
-            'client_ticketbundle_ordering[field_name]'  => 'Foo',
+            'client_ticketbundle_category[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 

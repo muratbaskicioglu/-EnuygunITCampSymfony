@@ -2,7 +2,6 @@
 
 namespace Client\TicketBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -57,12 +56,7 @@ class Category
 
     public function __construct()
     {
-        $this->ordering = new ArrayCollection();
-    }
-
-    public function __toString()
-    {
-        return "Category: " . $this->getId() . ". " . $this->getName();
+        $this->orders = new ArrayCollection();
     }
 
     /**
@@ -170,38 +164,5 @@ class Category
     {
         return $this->status;
     }
-
-    /**
-     * Add ordering
-     *
-     * @param \Client\TicketBundle\Entity\Ordering $ordering
-     *
-     * @return Category
-     */
-    public function addOrdering(\Client\TicketBundle\Entity\Ordering $ordering)
-    {
-        $this->ordering[] = $ordering;
-
-        return $this;
-    }
-
-    /**
-     * Remove ordering
-     *
-     * @param \Client\TicketBundle\Entity\Ordering $ordering
-     */
-    public function removeOrdering(\Client\TicketBundle\Entity\Ordering $ordering)
-    {
-        $this->ordering->removeElement($ordering);
-    }
-
-    /**
-     * Get ordering
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getOrdering()
-    {
-        return $this->ordering;
-    }
 }
+

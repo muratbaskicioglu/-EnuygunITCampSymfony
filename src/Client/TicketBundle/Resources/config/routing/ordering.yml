@@ -1,24 +1,24 @@
-order_index:
+ordering_index:
     path:     /
     defaults: { _controller: "ClientTicketBundle:Ordering:index" }
     methods:  GET
 
-order_show:
+ordering_show:
     path:     /{id}/show
     defaults: { _controller: "ClientTicketBundle:Ordering:show" }
     methods:  GET
 
-order_new:
+ordering_new:
     path:     /new
     defaults: { _controller: "ClientTicketBundle:Ordering:new" }
     methods:  [GET, POST]
 
-order_edit:
+ordering_edit:
     path:     /{id}/edit
     defaults: { _controller: "ClientTicketBundle:Ordering:edit" }
     methods:  [GET, POST]
 
-order_delete:
+ordering_delete:
     path:     /{id}/delete
     defaults: { _controller: "ClientTicketBundle:Ordering:delete" }
     methods:  DELETE

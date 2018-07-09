@@ -42,7 +42,7 @@ class OrderingController extends Controller
             $em->persist($ordering);
             $em->flush();
 
-            return $this->redirectToRoute('order_show', array('id' => $ordering->getId()));
+            return $this->redirectToRoute('ordering_show', array('id' => $ordering->getId()));
         }
 
         return $this->render('ordering/new.html.twig', array(
@@ -78,7 +78,7 @@ class OrderingController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('order_edit', array('id' => $ordering->getId()));
+            return $this->redirectToRoute('ordering_edit', array('id' => $ordering->getId()));
         }
 
         return $this->render('ordering/edit.html.twig', array(
@@ -103,7 +103,7 @@ class OrderingController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('order_index');
+        return $this->redirectToRoute('ordering_index');
     }
 
     /**
@@ -116,7 +116,7 @@ class OrderingController extends Controller
     private function createDeleteForm(Ordering $ordering)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('order_delete', array('id' => $ordering->getId())))
+            ->setAction($this->generateUrl('ordering_delete', array('id' => $ordering->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;
